@@ -6,6 +6,10 @@
   color: var(--text-dark);
 }
 
+.module-page p {
+  font-size: 1.1rem;
+}
+
 .modules-header {
   text-align: center;
   padding: 40px 10%;
