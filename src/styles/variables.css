@@ -1,0 +1,18 @@
+:root {
+  /* Colors */
+  --primary-color: #1e88e5;
+  --primary-hover: #1565c0;
+  --secondary-color: #90a4ae;
+  --text-dark: #1c313a;
+  --text-medium: #455a64;
+  --bg-gradient-start: #e3f2fd;
+  --bg-gradient-end: #eceff1;
+
+  /* Spacing */
+  --gap-small: 10px;
+  --gap-medium: 20px;
+  --gap-large: 40px;
+
+  /* Fonts */
+  --font-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
