@@ -1,3 +1,11 @@
+.modules-page {
+  padding: 40px 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
 .modules-header {
   text-align: center;
   padding: 40px 10%;

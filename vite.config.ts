@@ -12,6 +12,7 @@ export default defineConfig({
         index: "index.html",
         educational_modules: "educational_modules/index.html",
         "preventative-care": "educational_modules/preventative-care.html",
+        "maternal-health": "educational_modules/maternal-health.html",
       },
     },
   },
