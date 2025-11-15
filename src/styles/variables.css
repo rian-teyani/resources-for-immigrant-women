@@ -8,6 +8,10 @@
   --bg-gradient-start: #e3f2fd;
   --bg-gradient-end: #eceff1;
 
+  /* Card background colors */
+  --card-bg-primary: #ffffff;
+  --card-bg-secondary: #e6f2ff; /* light blue */
+
   /* Spacing */
   --gap-small: 10px;
   --gap-medium: 20px;
