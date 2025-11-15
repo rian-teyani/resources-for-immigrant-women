@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Health Tools & Resources</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./src/styles/variables.css" />
     <link rel="stylesheet" href="./src/styles/global.css" />
     <link rel="stylesheet" href="./src/styles/navbar.css" />
@@ -12,17 +14,8 @@
     <link rel="stylesheet" href="./src/styles/modules.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">Health Empower</a>
-        <ul class="nav-links">
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="/modules.html">Modules</a></li>
-          <li><a href="#about">About Us</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- Navigation Bar (included via JS) -->
+    <nav id="navbar" class="navbar"></nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -36,9 +29,9 @@
           first-generation women.
         </p>
         <div class="hero-buttons">
-          <a href="/modules.html" class="btn primary-btn"
-            >Start Learning Today</a
-          >
+          <a href="/educational_modules/index.html" class="btn primary-btn">
+            Start Learning Today
+          </a>
           <a href="#resources" class="btn secondary-btn">Find Resources</a>
         </div>
       </div>
@@ -49,5 +42,8 @@
         />
       </div>
     </section>
+
+    <!-- JS to include navbar -->
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

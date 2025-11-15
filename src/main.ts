@@ -1,24 +1,15 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+// Load HTML from external file into a container
+function includeHTML(selector: string, filePath: string) {
+  const container = document.querySelector(selector);
+  if (container) {
+    fetch(filePath)
+      .then((res) => res.text())
+      .then((html) => (container.innerHTML = html))
+      .catch((err) => console.error("Include failed:", err));
+  }
+}
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("#navbar", "/src/includes/navbar.html");
+  // includeHTML("#footer", "/src/includes/footer.html"); // optional
+});
