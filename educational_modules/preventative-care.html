@@ -3,66 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 1: Preventive Care</title>
-
+    <title>Preventive Care</title>
     <link rel="stylesheet" href="../src/styles/variables.css" />
     <link rel="stylesheet" href="../src/styles/global.css" />
     <link rel="stylesheet" href="../src/styles/navbar.css" />
     <link rel="stylesheet" href="../src/styles/modules.css" />
     <link rel="stylesheet" href="../src/styles/buttons.css" />
+    <link rel="stylesheet" href="../src/styles/cards.css" />
   </head>
   <body>
     <nav id="navbar" class="navbar"></nav>
-
-    <main style="padding: 40px 10%; max-width: 800px; margin: 0 auto">
-      <h1 style="color: var(--text-dark); margin-bottom: 20px">
-        Preventive Care
-      </h1>
-      <p style="font-size: 1.1rem; margin-bottom: 20px">
-        Empower women to understand and access preventive healthcare services in
-        the U.S.
+    <main
+      style="
+        padding: 40px 10%;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.7;
+        color: var(--text-dark);
+      "
+    >
+      <header class="modules-header">
+        <h1>Preventive Care</h1>
+        <p class="modules-subtitle">
+          Empowering women to understand and access preventive healthcare
+          services in the U.S.
+        </p>
+      </header>
+      <p>
+        Preventive care is all about taking steps to stay healthy before
+        problems arise. Regular visits to your doctor, routine screenings, and
+        vaccinations not only protect you but also your loved ones. Many
+        insurance plans cover preventive services at no extra cost, making it
+        easier than ever to prioritize your health.
       </p>
 
-      <h2>Key Learning Points</h2>
-      <ul>
-        <li>Preventive care means visiting the doctor before you feel sick.</li>
-        <li>Regular screenings and vaccines protect you and your family.</li>
-        <li>Insurance often covers preventive care at no extra cost.</li>
-      </ul>
+      <div class="card">
+        <div class="card-header" style="margin-bottom: 10px">
+          <h3>Key Points to Remember</h2>
+        </div>
+        <ul
+          style="
+            padding-left: 20px;
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <li>
+            Preventive care means visiting the doctor before you feel sick.
+          </li>
+          <li>Regular screenings and vaccines help catch problems early.</li>
+          <li>Insurance often covers preventive care at no extra cost.</li>
+        </ul>
+      </div>
 
-      <h2>Content</h2>
+      <h2>Understanding Preventive Services</h2>
+      <p>
+        A <strong>Primary Care Provider (PCP)</strong> is your main doctor or
+        nurse for yearly check-ups and health guidance. These visits are your
+        first line of defense in staying healthy.
+      </p>
+      <p><strong>Common Screenings Include:</strong></p>
       <ul>
-        <li>
-          <strong>Primary Care Provider (PCP):</strong> A doctor or nurse you
-          see for yearly check-ups.
-        </li>
-        <li>
-          <strong>Screenings:</strong>
-          <ul>
-            <li>Pap test: cervical cancer (every 3 years, ages 21–65)</li>
-            <li>Mammogram: breast cancer (every 1–2 years, ages 40–74)</li>
-            <li>Blood pressure, cholesterol, diabetes checks</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Vaccines:</strong> Flu shot every year, Tdap, COVID-19
-          boosters
-        </li>
-        <li>
-          <strong>Why it matters:</strong> Preventive care helps catch problems
-          early
-        </li>
+        <li>Pap test for cervical cancer (every 3 years, ages 21–65)</li>
+        <li>Mammogram for breast cancer (every 1–2 years, ages 40–74)</li>
+        <li>Blood pressure, cholesterol, and diabetes checks</li>
       </ul>
-
+      <p>
+        <strong>Vaccines</strong> help prevent illness before it starts.
+        Recommended vaccines include the annual flu shot, Tdap (tetanus,
+        diphtheria, pertussis), and COVID-19 boosters.
+      </p>
+      <p>
+        <strong>Why it matters:</strong> Preventive care detects potential
+        problems early when they are easier and less expensive to treat, keeping
+        you healthier over the long term.
+      </p>
       <h2>Practical Tips</h2>
       <ul>
         <li>
           Write down your family medical history to share with your doctor.
         </li>
-        <li>Use a calendar or phone reminders for check-ups.</li>
+        <li>
+          Use a calendar or phone reminders for regular check-ups and
+          screenings.
+        </li>
       </ul>
-
-      <h2>Resources</h2>
+      <h2>Helpful Resources</h2>
       <ul>
         <li>
           <a href="https://www.cdc.gov/prevention" target="_blank"
@@ -71,12 +98,11 @@
         </li>
         <li>
           <a href="https://www.nafcclinics.org/" target="_blank"
-            >Free clinics directory</a
+            >Free Clinics Directory</a
           >
         </li>
       </ul>
     </main>
-
     <script type="module" src="../src/main.ts"></script>
   </body>
 </html>

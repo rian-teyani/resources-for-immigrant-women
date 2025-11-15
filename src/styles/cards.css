@@ -1,0 +1,51 @@
+.card {
+  background: #f0f0f0; /* white background */
+  border-radius: 12px;
+  padding: 20px;
+  color: #333333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card header */
+.card-header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a73e8; /* primary color */
+}
+
+/* Card subheader / subtitle */
+.card-subtitle {
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* Card content */
+.card-content {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444444;
+}
+
+/* Card footer (optional) */
+.card-footer {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: #999999;
+}
+
+/* Optional: card image */
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0;
+}
