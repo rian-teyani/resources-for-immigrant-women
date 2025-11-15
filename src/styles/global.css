@@ -3,6 +3,7 @@ body {
   font-family: var(--font-body);
   color: var(--text-medium);
   line-height: 1.6;
+  background-color: #fafafa;
 }
 
 a {

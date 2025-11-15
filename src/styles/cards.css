@@ -1,5 +1,5 @@
 .card {
-  background: #f0f0f0;
+  background: #ffffff;
   border-radius: 12px;
   padding: 20px;
   color: #333333;
@@ -62,7 +62,7 @@
 .resource-card {
   display: flex;
   flex-direction: column;
-  background: #f0f0f0;
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
   text-decoration: none;
