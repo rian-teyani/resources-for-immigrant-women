@@ -7,6 +7,12 @@
   display: inline-block;
 }
 
+.btn-small {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
 .primary-btn {
   background-color: var(--primary-color);
   color: white;

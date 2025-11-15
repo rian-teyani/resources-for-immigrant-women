@@ -49,3 +49,36 @@
 .card h3 {
   margin: 0;
 }
+
+/* Resource Cards */
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: #e6f0ff;
+}
+
+.resource-card .card-content {
+  flex: 1;
+}
+
+.resource-card .card-button {
+  align-self: flex-start;
+  margin-top: 12px;
+}
