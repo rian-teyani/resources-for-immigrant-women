@@ -15,6 +15,8 @@ export default defineConfig({
         "maternal-health": "educational_modules/maternal-health.html",
         nutrition: "educational_modules/nutrition.html",
         "chronic-disease": "educational_modules/chronic-disease.html",
+        "navigating-healthcare.html":
+          "educational_modules/navigating-healthcare.html",
       },
     },
   },
