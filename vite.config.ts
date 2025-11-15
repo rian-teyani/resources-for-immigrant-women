@@ -10,7 +10,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: "index.html",
-        modules: "modules.html",
+        educational_modules: "educational_modules/index.html",
+        "preventative-care": "educational_modules/preventative-care.html",
       },
     },
   },
