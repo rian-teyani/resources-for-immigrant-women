@@ -46,8 +46,20 @@
   object-fit: cover;
 }
 
+/* Conditional hover effect */
+.card.hoverable:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
 .card h3 {
   margin: 0;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin: 0px;
 }
 
 .card ul {

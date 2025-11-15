@@ -34,25 +34,3 @@
   gap: 30px;
   padding: 40px 10%;
 }
-
-.module-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  color: var(--text-medium);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.module-card h2 {
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-.module-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
