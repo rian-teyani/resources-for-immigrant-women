@@ -173,26 +173,53 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* clinic-card overrides to ensure readability inside featured card */
+.clinic-card .card-header h3,
+.clinic-card .card-content,
+.clinic-card .card-content p {
+  color: var(--text-dark) !important;
+}
+
+/* make the zip input dark-on-light so it's legible */
+.clinic-card .zip-input {
+  background: #fff;
+  color: #000;
+  border: 2px solid #ccc;
+}
+
+.clinic-card .zip-input::placeholder {
+  color: #666;
+}
+
+.clinic-card .btn.primary-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
 .clinic-results {
   margin-top: 20px;
 }
 
 .clinic-result {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 12px;
-  border-left: 4px solid white;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-dark) !important;
 }
 
 .clinic-result h4 {
   margin: 0 0 8px 0;
-  color: white;
+  color: var(--text-dark) !important;
+  font-size: 1.1rem;
 }
 
 .clinic-result p {
   margin: 4px 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-medium) !important;
+  line-height: 1.4;
 }
 
 .clinic-result .btn {
