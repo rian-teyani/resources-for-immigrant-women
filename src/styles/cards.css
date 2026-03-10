@@ -174,10 +174,12 @@
 }
 
 /* clinic-card overrides to ensure readability inside featured card */
+/* use primary color (blue) for clinic text so it matches the rest of the site
+   while still being legible against the white/light background */
 .clinic-card .card-header h3,
 .clinic-card .card-content,
 .clinic-card .card-content p {
-  color: var(--text-dark) !important;
+  color: var(--primary-color) !important;
 }
 
 /* make the zip input dark-on-light so it's legible */
