@@ -1,9 +1,9 @@
 (function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const a of s.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const l=`<div class="nav-container">
-  <a href="./index.html" class="nav-logo">Health Empower</a>
+  <a href="/resources-for-immigrant-women/index.html" class="nav-logo">Health Empower</a>
   <div class="nav-links">
-    <a href="./educational_modules/index.html">Modules</a>
-    <a href="./index.html#resources">Resources</a>
-    <a href="./index.html#about">About Us</a>
+    <a href="/resources-for-immigrant-women/educational_modules/index.html">Modules</a>
+    <a href="/resources-for-immigrant-women/index.html#resources">Resources</a>
+    <a href="/resources-for-immigrant-women/index.html#about">About Us</a>
   </div>
 </div>
 `;document.addEventListener("DOMContentLoaded",()=>{const n=document.querySelector("#navbar");n&&(n.innerHTML=l);const t=document.getElementById("findClinics"),i=document.getElementById("zipCode");t&&i&&(t.addEventListener("click",async()=>{const r=i.value.trim();if(!r||r.length!==5||!/^\d+$/.test(r)){o("Please enter a valid 5-digit zip code.");return}t.disabled=!0,t.textContent="Searching...";try{await c(r)}catch{o("Unable to find clinics. Please try again or visit hrsa.gov directly.")}finally{t.disabled=!1,t.textContent="Find Clinics"}}),i.addEventListener("keypress",r=>{r.key==="Enter"&&t.click()}))});async function c(n){try{const t=await fetch("https://findahealthcenter.hrsa.gov/widgets-data/widgets-data-v1.json");if(!t.ok)throw new Error("API request failed");const r=(await t.json()).filter(e=>e.zip_code?.toString().startsWith(n.substring(0,3))||e.zip_code?.toString()===n).slice(0,5);d(r,n)}catch(t){console.error("Error fetching clinics:",t),h(n)}}function d(n,t){const i=document.getElementById("clinicResults");if(n.length===0){i.innerHTML=`
