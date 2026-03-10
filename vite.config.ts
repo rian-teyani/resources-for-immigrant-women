@@ -8,6 +8,7 @@ export default defineConfig({
     host: true,
   },
   build: {
+    outDir: ".",
     rollupOptions: {
       input: {
         index: "index.html",
