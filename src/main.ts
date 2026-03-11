@@ -40,64 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function findClinics(zipCode: string) {
-  try {
-    // Using HRSA's Find a Health Center API
-    const response = await fetch(`https://findahealthcenter.hrsa.gov/widgets-data/widgets-data-v1.json`);
-
-    if (!response.ok) {
-      throw new Error('API request failed');
-    }
-
-    const data = await response.json();
-
-    // Filter clinics by zip code (approximate location matching)
-    const nearbyClinics = data.filter((clinic: any) => {
-      return clinic.zip_code?.toString().startsWith(zipCode.substring(0, 3)) ||
-             clinic.zip_code?.toString() === zipCode;
-    }).slice(0, 5); // Limit to 5 results
-
-    displayClinics(nearbyClinics, zipCode);
-
-  } catch (error) {
-    console.error('Error fetching clinics:', error);
-    // Fallback: Show general clinic finder links
-    showClinicFallback(zipCode);
-  }
-}
-
-function displayClinics(clinics: any[], zipCode: string) {
-  const clinicResults = document.getElementById('clinicResults') as HTMLDivElement;
-
-  if (clinics.length === 0) {
-    clinicResults.innerHTML = `
-      <div class="clinic-result">
-        <h4>No clinics found in your exact area</h4>
-        <p>Try a nearby zip code or visit the resources below for more options.</p>
-        <a href="https://www.hrsa.gov/find-a-health-center" target="_blank" class="btn primary-btn btn-small">Search HRSA Website</a>
-      </div>
-    `;
-    return;
-  }
-
-  const resultsHtml = clinics.map(clinic => `
-    <div class="clinic-result">
-      <h4>${clinic.site_name || clinic.name || 'Health Center'}</h4>
-      <p><strong>Address:</strong> ${clinic.site_address || clinic.address || 'Address not available'}</p>
-      <p><strong>Phone:</strong> ${clinic.site_telephone || clinic.phone || 'Phone not available'}</p>
-      <p><strong>Services:</strong> Primary care, preventive services, and more</p>
-      ${clinic.site_website ? `<a href="${clinic.site_website}" target="_blank" class="btn primary-btn btn-small">Visit Website</a>` : ''}
-    </div>
-  `).join('');
-
-  clinicResults.innerHTML = `
-    <h4>Clinics found near ${zipCode}:</h4>
-    ${resultsHtml}
-    <div class="clinic-result">
-      <h4>Need more options?</h4>
-      <p>Visit HRSA's official site for a comprehensive search with filters.</p>
-      <a href="https://www.hrsa.gov/find-a-health-center" target="_blank" class="btn primary-btn btn-small">Search More Clinics</a>
-    </div>
-  `;
+  // For now, show fallback with useful links since the API might have CORS issues
+  showClinicFallback(zipCode);
 }
 
 function showClinicFallback(zipCode: string) {
